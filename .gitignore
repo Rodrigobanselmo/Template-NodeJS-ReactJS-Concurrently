@@ -24,6 +24,7 @@ coverage
 
 # Dependency directory
 node_modules
+src/client/node_modules
 bower_components
 
 # Editors

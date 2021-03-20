@@ -5,9 +5,14 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+    "start_node": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "start_client": "yarn --cwd src/client start",
+    "dev": "concurrently \"yarn start_node\" \"yarn start_client\" "
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
